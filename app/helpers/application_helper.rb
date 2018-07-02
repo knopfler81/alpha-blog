@@ -6,8 +6,13 @@ module ApplicationHelper
     image_tag(gravatar_url, alt: user.username, class: "img-circle")
   end
 
-  def prefered_color
-    return current_user.color if (current_user && current_user.color.present?)
+  def prefered_background_color
+    return current_user.background_color if (current_user && current_user.background_color.present?)
     '#fff'
+  end
+
+  def prefered_navbar_color
+    return current_user.navbar_color if (current_user && current_user.navbar_color.present?)
+    '#aaa'
   end
 end

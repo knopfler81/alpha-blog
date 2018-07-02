@@ -29,13 +29,24 @@
       </div>
       <div class="form-group">
         <div class="control-label col-sm-2">
-          <%= f.label :color %>
+          <%= f.label :background_color %>
         </div>
         <div class="col-sm-2">
-          <%= f.text_field :color, class: "form-control", placeholder: "Enter color" %>
+          <%= f.text_field :background_color, class: "form-control", placeholder: "Enter color" %>
         </div>
         <div class="col-sm-6">
-          <%= react_component('Colorpicker', {color: prefered_color, selector: 'user_color'}) %>
+          <%= react_component('ColorpickerBackground', {background_color: prefered_background_color, selector: 'user_background_color'}) %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="control-label col-sm-2">
+          <%= f.label :navbar_color %>
+        </div>
+        <div class="col-sm-2">
+          <%= f.text_field :navbar_color, class: "form-control", placeholder: "Enter color" %>
+        </div>
+        <div class="col-sm-6">
+          <%= react_component('ColorpickerNavbar', {navbar_color: prefered_navbar_color, selector: 'user_navbar_color'}) %>
         </div>
       </div>
       <div class="form-group">

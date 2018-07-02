@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180629145228) do
+ActiveRecord::Schema.define(version: 20180702090004) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id"
@@ -38,7 +38,8 @@ ActiveRecord::Schema.define(version: 20180629145228) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.boolean "admin", default: false
-    t.text "color"
+    t.text "background_color"
+    t.string "navbar_color"
   end
 
 end

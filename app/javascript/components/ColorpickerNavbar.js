@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { SketchPicker } from 'react-color'
 
 
-class Colorpicker extends React.Component {
+class ColorpickerNavbar extends React.Component {
 
   constructor(props) {
     super(props);
@@ -14,25 +14,26 @@ class Colorpicker extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange = (color) => {
-    document.body.style.background = color.hex;
+  handleChange = (navbar_color) => {
+    var mynav = document.getElementById("mynav")
+    mynav.style.background = navbar_color.hex;
 
     let elem = document.querySelector('#' + this.state.selector);
 
-    elem.value = color.hex;
+    elem.value = navbar_color.hex;
   }
 
 
   render(){
     return  (
         <React.Fragment>
-          <SketchPicker color={this.props.color}
+          <SketchPicker navbar_color={this.props.navbar_color}
                         onChange={this.handleChange}/>
         </React.Fragment>
     );
   }
 }
 
-Colorpicker.propTypes = {};
+ColorpickerNavbar.propTypes = {};
 
-export default Colorpicker
+export default ColorpickerNavbar

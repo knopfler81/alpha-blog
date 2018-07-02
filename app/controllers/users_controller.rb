@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :color)
+    params.require(:user).permit(:username, :email, :password, :background_color, :navbar_color)
   end
 
   def require_same_user

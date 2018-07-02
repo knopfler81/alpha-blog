@@ -9,5 +9,5 @@ class User < ApplicationRecord
             format: { with: VALID_EMAIL_REGEX }
   has_secure_password
   VALID_COLOR_REGEX = /\A#[abcdef0-9]{3,6}/i
-  validates :color, format: { with: VALID_COLOR_REGEX }
+  validates :background_color, format: { with: VALID_COLOR_REGEX }
 end
