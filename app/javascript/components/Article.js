@@ -27,7 +27,7 @@ class Article extends React.Component {
 
   componentDidMount(){
     var self = this;
-     setInterval(function () { self.forceUpdate()}, 1000);
+     setInterval(function() { self.forceUpdate()}, 1000);
   }
 
   componentWillUnmount(){
@@ -39,11 +39,11 @@ class Article extends React.Component {
 }
 
 Article.propTypes = {
-  title: PropTypes.string,
-  path: PropTypes.string,
-  description: PropTypes.string,
-  author: PropTypes.string,
-  created_at: PropTypes.string,
-  updated_at: PropTypes.string
+  title:        PropTypes.string,
+  path:         PropTypes.string,
+  description:  PropTypes.string,
+  author:       PropTypes.string,
+  created_at:   PropTypes.string,
+  updated_at:   PropTypes.string
 };
 export default Article
